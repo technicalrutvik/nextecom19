@@ -131,7 +131,7 @@ export async function getServerSideProps(ctx){
         }
     })
     const products = await res.json()
-    
+    console.log(products)
     if(products.error){
         return{
             props:{error:products.error}

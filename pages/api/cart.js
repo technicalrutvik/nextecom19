@@ -62,7 +62,7 @@ const fetchUserCart = Authenticated(async (req,res) => {
     const cart = await Cart.findOne({user:req.userId})
                         .populate("products.product")
     res.status(200).json(cart.products)
-
+    console.log(cart.products)
 })
 
 const removeProduct = Authenticated(async(req,res)=>{
